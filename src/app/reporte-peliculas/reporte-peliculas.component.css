@@ -1,0 +1,260 @@
+/* Estilos para el contenedor principal del componente */
+.reporte-peliculas-container::before {
+    content: "";
+    background: url('https://64.media.tumblr.com/23cb8a70de336bb0aae49bab88a7198b/tumblr_phu329lVGh1up139zo1_1280.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2000%;
+    height: 100%;
+    z-index: -1;
+}
+
+.reporte-peliculas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.336);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para el encabezado */
+.reporte-peliculas-container h1 {
+    color: #db3434; /* Azul brillante */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la fila de filtros */
+.filtro-row {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    width: 100%;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease;
+}
+
+/* Estilos para la fila de botones */
+.botones-row {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones en el lado derecho */
+    margin-top: auto; /* Coloca los botones en la parte inferior */
+    animation: slideInRight 1s ease;
+}
+
+/* Estilos compartidos para etiquetas de entrada */
+.reporte-peliculas-container label {
+    display: block;
+    margin-top: 10px;
+    color: #000000; /* Azul brillante */
+    font-weight: bold;
+}
+
+/* Estilos compartidos para campos de entrada de texto y número */
+.reporte-peliculas-container input[type="text"],
+.reporte-peliculas-container input[type="number"] {
+    width: calc(33% - 10px); /* Ajusta el ancho para tres elementos en una fila */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #000000; /* Azul brillante */
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Estilos compartidos para botones */
+.reporte-peliculas-container button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 5px; /* Margen entre botones */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Estilos al pasar el mouse sobre los botones */
+.reporte-peliculas-container button:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el mensaje de no resultados */
+.mensaje-no-resultados {
+    display: block;
+    background-color: #e74c3c; /* Rojo coral */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin: 0; /* Elimina margen superior e inferior */
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Estilos al pasar el mouse sobre el mensaje de no resultados */
+.mensaje-no-resultados:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+
+/* Estilos para la caja contenedora de la tabla */
+.tabla-container {
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 870px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}/* Estilos para la tabla de resultados */
+.tabla-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 0; /* Elimina margen inferior */
+    overflow: hidden; /* Oculta el desbordamiento para un aspecto más moderno */
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-container th, .tabla-container td {
+    border: 1px solid #3498db; /* Borde azul brillante */
+    padding: 15px; /* Aumenta el espacio interno de celda */
+    text-align: left;
+    position: relative;
+}
+
+/* Estilo mejorado para la cabecera de la tabla */
+.tabla-container th {
+    background-color: #3498db; /* Azul brillante */
+    color: #fff;
+    padding: 15px; /* Aumenta el espacio interno de celda */
+    border: 1px solid #3498db; /* Borde azul brillante */
+    border-bottom: 2px solid #2980b9; /* Borde inferior más oscuro */
+    position: relative;
+    transition: background-color 0.3s; /* Animación de cambio de color al pasar el mouse */
+}
+
+/* Efecto de sombra al pasar el mouse sobre la cabecera de la tabla */
+.tabla-container th:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+/* Estilo para las celdas de datos */
+.tabla-container td {
+    background-color: #f2f2f2; /* Gris claro */
+    color: #333; /* Color de texto más oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s; /* Agregada animación de transformación */
+}
+
+/* Efecto de sombra y escala al pasar el mouse sobre las filas de la tabla */
+.tabla-container tr:hover td {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Estilo para simular una "ventana" alrededor de cada fila */
+.tabla-container tr {
+    position: relative;
+    overflow: hidden; /* Oculta el desbordamiento de las celdas para un aspecto más moderno */
+}
+
+.tabla-container tr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #34dbb7; /* Borde azul brillante */
+    border-radius: 10px; /* Bordes redondeados */
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tabla-container tr:hover::before {
+    opacity: 1;
+}
+
+/* Animación de cambio de color al pasar el mouse sobre el título */
+.tabla-container h2:hover {
+    color: #e74c3c; /* Rojo coral */
+    transition: color 0.3s;
+}
+
+/* Estilo para las celdas de datos */
+.tabla-container td {
+    background-color: #f2f2f2; /* Gris claro */
+    color: #333; /* Color de texto más oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s; /* Agregada animación de transformación */
+}
+
+/* Efecto de sombra y escala al pasar el mouse sobre las filas de la tabla */
+.tabla-container tr:hover td {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Estilo para simular una "ventana" alrededor de cada fila */
+.tabla-container tr {
+    position: relative;
+    overflow: hidden; /* Oculta el desbordamiento de las celdas para un aspecto más moderno */
+}
+
+.tabla-container tr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #db3434; /* Borde azul brillante */
+    border-radius: 10px; /* Bordes redondeados */
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tabla-container tr:hover::before {
+    opacity: 1;
+}
+
+/* Animación de cambio de color al pasar el mouse sobre el título */
+.tabla-container h2:hover {
+    color: #e74c3c; /* Rojo coral */
+    transition: color 0.3s;
+}

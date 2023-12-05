@@ -1,0 +1,55 @@
+<div class="reporte-peliculas-container">
+    <h1>Informe de Películas</h1>
+    <div class="filtro-row">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" [(ngModel)]="filtroNombre" />
+        </div>
+
+        <div>
+            <label for="genero">Género:</label>
+            <input type="text" id="genero" [(ngModel)]="filtroGenero" />
+        </div>
+
+        <div>
+            <label for="lanzamiento">Año Lanzamiento:</label>
+            <input type="number" id="lanzamiento" [(ngModel)]="filtroLanzamiento" />
+        </div>
+    </div>
+
+    <div class="botones-row d-flex justify-content-end">
+        <button type="button" class="btn btn-primary aplicar-filtros" (click)="aplicarFiltros()">Aplicar Filtros</button>
+        <button type="button" class="btn btn-success restablecer-filtros" (click)="resetearFiltros()">Restablecer Filtros</button>
+        
+    </div>
+    
+
+    <div *ngIf="!resultadosEncontrados" class="mensaje-no-resultados">
+        No se encontraron resultados.
+    </div>
+    <div *ngIf="resultadosEncontrados" class="tabla-container">
+        <div>
+            <h1>Exportar en: </h1>
+            <button type="button" class="btn btn-warning generar-pdf" (click)="generarPDF()"> PDF</button>
+            <button type="button" class="btn btn-info exportar-csv" (click)="exportarCSV()"> CSV</button>
+            <button type="button" class="btn btn-warning exportar-json" (click)="exportarJSON()">JSON</button>
+            <button type="button" class="btn btn-danger exportar-xml" (click)="exportarXML()"> XML</button>
+        </div>
+    </div>
+
+    <div *ngIf="resultadosEncontrados" class="tabla-container">
+        <table *ngIf="resultadosEncontrados">
+            
+            <tr>
+                <th>Título</th>
+                <th>Género</th>
+                <th>Año de lanzamiento</th>
+            </tr>
+            <tr *ngFor="let pelicula of peliculas">
+                <td>{{ pelicula.titulo }}</td>
+                <td>{{ pelicula.genero }}</td>
+                <td>{{ pelicula.lanzamiento }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

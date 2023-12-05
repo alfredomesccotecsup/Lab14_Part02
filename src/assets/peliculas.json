@@ -1,0 +1,107 @@
+[
+  {
+    "titulo": "Inception",
+    "genero": "Ciencia ficción",
+    "lanzamiento": 2010
+  },
+  {
+    "titulo": "The Shawshank Redemption",
+    "genero": "Drama",
+    "lanzamiento": 1994
+  },
+  {
+    "titulo": "Pulp Fiction",
+    "genero": "Crimen",
+    "lanzamiento": 1994
+  },
+  {
+    "titulo": "The Godfather",
+    "genero": "Drama",
+    "lanzamiento": 1972
+  },
+  {
+    "titulo": "Forrest Gump",
+    "genero": "Drama",
+    "lanzamiento": 1994
+  },
+  {
+    "titulo": "The Dark Knight",
+    "genero": "Acción",
+    "lanzamiento": 2008
+  },
+  {
+    "titulo": "Schindler's List",
+    "genero": "Drama",
+    "lanzamiento": 1993
+  },
+  {
+    "titulo": "Fight Club",
+    "genero": "Drama",
+    "lanzamiento": 1999
+  },
+  {
+    "titulo": "The Matrix",
+    "genero": "Ciencia ficción",
+    "lanzamiento": 1999
+  },
+  {
+    "titulo": "The Lord of the Rings: The Fellowship of the Ring",
+    "genero": "Fantasía",
+    "lanzamiento": 2001
+  },
+  {
+    "titulo": "The Silence of the Lambs",
+    "genero": "Thriller",
+    "lanzamiento": 1991
+  },
+  {
+    "titulo": "The Social Network",
+    "genero": "Drama",
+    "lanzamiento": 2010
+  },
+  {
+    "titulo": "Gladiator",
+    "genero": "Acción",
+    "lanzamiento": 2000
+  },
+  {
+    "titulo": "Titanic",
+    "genero": "Romance",
+    "lanzamiento": 1997
+  },
+  {
+    "titulo": "Inglourious Basterds",
+    "genero": "Bélica",
+    "lanzamiento": 2009
+  },
+  {
+    "titulo": "The Departed",
+    "genero": "Crimen",
+    "lanzamiento": 2006
+  },
+  {
+    "titulo": "Casablanca",
+    "genero": "Romance",
+    "lanzamiento": 1942
+  },
+  {
+    "titulo": "Goodfellas",
+    "genero": "Crimen",
+    "lanzamiento": 1990
+  },
+  {
+    "titulo": "The Shining",
+    "genero": "Terror",
+    "lanzamiento": 1980
+  },
+  {
+    "titulo": "The Grand Budapest Hotel",
+    "genero": "Comedia",
+    "lanzamiento": 2014
+  },
+  {
+    "titulo": "The Big Lebowski",
+    "genero": "Comedia",
+    "lanzamiento": 1998
+  }
+]
